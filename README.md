@@ -4,7 +4,7 @@
 
 This project implements a comprehensive relational database management system designed to manage core operations for a modern university. It is meticulously structured into two primary interconnected schemas: **Education** and **Library**, providing a holistic solution for academic and resource management.
 
-The database is built on **SQL Server** and its codebase has undergone a significant "appearance overhaul." While preserving all original logical functionalities and core business rules, the SQL scripts have been refactored with new naming conventions, consistent formatting, and newly generated realistic test data, making the codebase clean, organized, and easily navigable.
+The database is built on **SQL Server**, and its codebase is designed to be clean, organized, and easily navigable, with consistent naming conventions and formatting.
 
 ## Key Features
 
@@ -29,7 +29,7 @@ The database is built on **SQL Server** and its codebase has undergone a signifi
 ### Role-Based Access Control
 * Database roles (Admin, Librarian, Student) are defined with specific granular permissions (e.g., `INSERT` for Admins, `EXECUTE` for Librarians on borrowing procedures, `SELECT` on relevant views for Students) to enforce security and separation of duties.
 
-### Code Transformation & Organization
+### Code Organization
 * **Unified Naming Conventions:** All tables, columns, functions, stored procedures, and triggers adhere to a consistent, descriptive naming standard.
 * **Clean Codebase:** All SQL scripts are free of comments and follow a uniform formatting style for improved readability.
 * **Structured Project Layout:** Files are logically grouped into folders by schema and script type, simplifying navigation and maintenance.
@@ -43,6 +43,56 @@ The database is built on **SQL Server** and its codebase has undergone a signifi
 ## Project Structure
 
 The project is organized into a clear directory structure:
+Here's the updated README.md with all references to it being a "transformation from another project" removed. It now presents the project as a standalone, clean, and organized system from its inception.
+
+Markdown
+
+# University Database Management System
+
+## Project Overview
+
+This project implements a comprehensive relational database management system designed to manage core operations for a modern university. It is meticulously structured into two primary interconnected schemas: **Education** and **Library**, providing a holistic solution for academic and resource management.
+
+The database is built on **SQL Server**, and its codebase is designed to be clean, organized, and easily navigable, with consistent naming conventions and formatting.
+
+## Key Features
+
+### Modular Design
+* **Education Schema:** Manages all academic aspects, including students, instructors, departments, courses, enrollments, and academic progress.
+* **Library Schema:** Handles library resources, including books, authors, publishers, book copies, member borrowings, returns, and fines.
+
+### Cross-Schema Interactivity
+* **Automatic Library Account Creation:** Student registration in the Education schema automatically creates a corresponding library member account.
+* **Library Access Deactivation:** Student status changes (e.g., graduation, expulsion) in the Education schema automatically deactivate their library borrowing privileges.
+* **National ID Validation:** Ensures the integrity of national identification codes for all new student, instructor, and admin registrations.
+
+### Smart Recommendation Systems
+* **Course Suggestion:** Recommends courses to students based on their major's curriculum plan, unpassed courses, and term acquisition priority.
+* **Book Recommendation:** Implements a collaborative filtering algorithm to suggest books to library members based on the borrowing patterns of similar users.
+
+### Robust Data Management
+* **Normalized Design:** Tables are designed following normalization principles to minimize data redundancy and improve integrity.
+* **Comprehensive Data Operations:** Includes DDL (Data Definition Language) for schema and table creation, as well as DML (Data Manipulation Language) for data insertion, deletion, and updates.
+* **Transactional Integrity:** Critical operations are encapsulated within transactions to ensure atomicity and data consistency.
+
+### Role-Based Access Control
+* Database roles (Admin, Librarian, Student) are defined with specific granular permissions (e.g., `INSERT` for Admins, `EXECUTE` for Librarians on borrowing procedures, `SELECT` on relevant views for Students) to enforce security and separation of duties.
+
+### Code Organization
+* **Unified Naming Conventions:** All tables, columns, functions, stored procedures, and triggers adhere to a consistent, descriptive naming standard.
+* **Clean Codebase:** All SQL scripts are free of comments and follow a uniform formatting style for improved readability.
+* **Structured Project Layout:** Files are logically grouped into folders by schema and script type, simplifying navigation and maintenance.
+
+## Technologies Used
+
+* **Database System:** Microsoft SQL Server
+* **Management Tool:** SQL Server Management Studio (SSMS)
+* **Language:** T-SQL
+
+## Project Structure
+
+The project is organized into a clear directory structure:
+
 Your_Project_Root/
 ├── Database_Setup/              # Scripts for initial database and security setup
 ├── Education_Schema/            # Scripts for the academic and administrative schema
@@ -57,7 +107,7 @@ Your_Project_Root/
 ├── Data_Inserts/            # Scripts to insert test data
 ├── Data_Deletes/            # Scripts to delete existing data
 ├── Functions/               # User-defined functions
-├── Stored_Procedures/       # Stored procedures
+├── Stored_Procedures/       # Stored Procedures
 └── Triggers/                # Database triggers
 
 ## Setup and Installation
@@ -131,9 +181,8 @@ After setting up the database, you can run the provided test scripts to verify f
 
 You can connect to the database using the test logins created in `04_Role_Security_Setup.sql` (e.g., `TestAdminLogin`, `TestLibrarianLogin`, `TestStudentLogin`) to observe role-based access.
 
-
-This transformation highlights the ability to maintain robust functionality while significantly improving the maintainability and presentation of a complex database solution.
-
 ## Acknowledgments
 
 This database project was developed as part of a university course requirement.
+
+---
