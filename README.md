@@ -131,13 +131,6 @@ After setting up the database, you can run the provided test scripts to verify f
 
 You can connect to the database using the test logins created in `04_Role_Security_Setup.sql` (e.g., `TestAdminLogin`, `TestLibrarianLogin`, `TestStudentLogin`) to observe role-based access.
 
-## Code Transformation Philosophy
-
-This project showcases a significant transformation of the original SQL codebase. The core functionalities and business logic remain identical to the initial design. However, the code's "appearance" has been fundamentally altered through:
-* **Consistent, Descriptive Naming:** All database objects (schemas, tables, columns, functions, procedures, triggers) now follow a uniform and highly readable naming convention.
-* **Standardized Formatting:** Every script adheres to consistent indentation, spacing, and casing for enhanced readability.
-* **Data Overhaul:** All test data has been replaced with new, distinct, yet logically coherent and synchronized values, providing a fresh dataset for demonstration.
-* **Clarity and Maintainability:** The elimination of comments (as per project specific requirements) combined with logical organization ensures a clean and professional codebase.
 
 This transformation highlights the ability to maintain robust functionality while significantly improving the maintainability and presentation of a complex database solution.
 
