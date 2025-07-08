@@ -4,7 +4,7 @@ GO
 DROP PROCEDURE IF EXISTS Education.usp_RegisterAdminWithAddress;
 GO
 
-CREATE PROCEDURE usp_RegisterAdminWithAddress
+CREATE PROCEDURE Education.usp_RegisterAdminWithAddress
     @AdminNationalID NVARCHAR(10),
     @AdminFirstName NVARCHAR(50),
     @AdminLastName NVARCHAR(50),
@@ -40,7 +40,7 @@ BEGIN
             BuildingNumber, PostalCode, AdditionalDetails
         )
         VALUES (
-            'Admin', @AdminNationalID, @AddressCountry, @AddressProvince, @AddressCity, @AddressStreet, @AddressAlley,
+            N'Admin', @AdminNationalID, @AddressCountry, @AddressProvince, @AddressCity, @AddressStreet, @AddressAlley,
             @AddressBuildingNumber, @AddressPostalCode, @AddressDetails
         );
 
@@ -60,7 +60,10 @@ BEGIN
         COMMIT TRANSACTION;
     END TRY
     BEGIN CATCH
-        ROLLBACK TRANSACTION;
+        IF (XACT_STATE()) <> 0 
+        BEGIN
+            ROLLBACK TRANSACTION;
+        END;
         THROW;
     END CATCH
 END;

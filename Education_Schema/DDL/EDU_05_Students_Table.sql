@@ -21,5 +21,5 @@ CREATE TABLE Education.Students (
     CONSTRAINT CHK_StudentGender_Valid CHECK (GenderCode IN ('M', 'F')),
     CONSTRAINT CHK_StudentEnrollmentStatus_Valid CHECK (EnrollmentStatus IN ('Active', 'Expelled', 'Graduated', 'Dropped')),
     CONSTRAINT FK_Student_DepartmentEnrollment FOREIGN KEY (EnrolledDepartmentID) REFERENCES Education.Departments(DepartmentID),
-    CONSTRAINT FK_Student_MajorSelection FOREIGN KEY (ChosenMajorID) REFERENCES Education.Majors(MajorID)
+    CONSTRAINT FK_Student_MajorSelection FOREIGN KEY (ChosenMajorID) REFERENCES Education.Majors(AcademicMajorID) -- Corrected column name here
 );

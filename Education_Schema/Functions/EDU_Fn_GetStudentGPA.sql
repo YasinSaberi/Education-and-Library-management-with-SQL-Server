@@ -1,10 +1,14 @@
 USE DB_project;
 GO
 
-DROP FUNCTION IF EXISTS Education.fn_GetStudentGPA;
+-- Drop old function name if it exists (fn_GetStudentGPA)
+DROP FUNCTION IF EXISTS Education.fn_GetStudentGPA; 
+GO
+-- Drop the new function name (CalculateStudentGPA) in case it was partially created
+DROP FUNCTION IF EXISTS Education.CalculateStudentGPA; 
 GO
 
-CREATE FUNCTION Education.fn_GetStudentGPA
+CREATE FUNCTION Education.CalculateStudentGPA -- CORRECTED: Function name changed to CalculateStudentGPA
 (
     @StudentIdentifier INT,
     @AcademicTermIdentifier INT
@@ -37,3 +41,4 @@ BEGIN
 
     RETURN @CalculatedGPA;
 END;
+GO

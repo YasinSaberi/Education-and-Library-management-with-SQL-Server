@@ -4,7 +4,7 @@ GO
 DROP PROCEDURE IF EXISTS Education.usp_GetStudentTranscript;
 GO
 
-CREATE PROCEDURE usp_GetStudentTranscript
+CREATE PROCEDURE Education.usp_GetStudentTranscript
     @TargetStudentID INT,
     @AcademicSemesterID INT
 AS
@@ -28,7 +28,7 @@ BEGIN
         Education.Courses AS course_definition 
         ON course_offering_info.OfferedCourseID = course_definition.CurriculumCourseID
     WHERE 
-        enrollment_detail.EnrolledStudentID = @TargetStudentID 
+        enrollment_detail.EnrolledStudentID = @TargetStudentID
         AND course_offering_info.OfferingSemesterID = @AcademicSemesterID;
 
     INSERT INTO Education.EventLogs (

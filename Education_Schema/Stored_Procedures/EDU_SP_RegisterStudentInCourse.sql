@@ -4,7 +4,7 @@ GO
 DROP PROCEDURE IF EXISTS Education.usp_RegisterStudentInCourse;
 GO
 
-CREATE PROCEDURE usp_RegisterStudentInCourse
+CREATE PROCEDURE Education.usp_RegisterStudentInCourse
     @TargetStudentID INT,
     @CourseOfferingToRegisterID INT
 AS
@@ -35,7 +35,10 @@ BEGIN
         COMMIT TRANSACTION;
     END TRY
     BEGIN CATCH
-        ROLLBACK TRANSACTION;
+        IF (XACT_STATE()) <> 0 
+        BEGIN
+            ROLLBACK TRANSACTION;
+        END;
         THROW;
     END CATCH
 END;

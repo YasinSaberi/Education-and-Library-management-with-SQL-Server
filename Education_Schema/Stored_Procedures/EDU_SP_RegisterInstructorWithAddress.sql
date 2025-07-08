@@ -4,7 +4,7 @@ GO
 DROP PROCEDURE IF EXISTS Education.usp_RegisterInstructorWithAddress;
 GO
 
-CREATE PROCEDURE usp_RegisterInstructorWithAddress
+CREATE PROCEDURE Education.usp_RegisterInstructorWithAddress
     @InstructorNationalID NVARCHAR(10),
     @InstructorFirstName NVARCHAR(50),
     @InstructorLastName NVARCHAR(50),
@@ -47,7 +47,7 @@ BEGIN
             BuildingNumber, PostalCode, AdditionalDetails
         )
         VALUES (
-            'Instructor', @InstructorNationalID, @AddressCountry, @AddressProvince, @AddressCity, @AddressStreetName, @AddressAlleyName,
+            N'Instructor', @InstructorNationalID, @AddressCountry, @AddressProvince, @AddressCity, @AddressStreetName, @AddressAlleyName,
             @AddressBuildingNumber, @AddressPostalCode, @AddressAdditionalDetails
         );
 

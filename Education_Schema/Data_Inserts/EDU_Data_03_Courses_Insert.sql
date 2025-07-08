@@ -2,229 +2,199 @@
 GO
 
 INSERT INTO Education.Courses (OfficialCourseName, CourseIdentifierCode, CourseCreditUnits, AcademicCourseType, TargetDegreeLevel, AssociatedMajorID, OwningDepartmentID) VALUES
-(N'Foundations of Computing', 'COMP101', 3, N'Theory', N'Bachelor', 1, 1),
-(N'Advanced Algorithms', 'COMP201', 4, N'Theory', N'Bachelor', 1, 1),
-(N'Computer Networks', 'COMP301', 3, N'Theory', N'Bachelor', 1, 1),
-(N'Database Management', 'COMP401', 3, N'Practical', N'Bachelor', 1, 1),
-(N'Web Technologies', 'COMP501', 2, N'Practical', N'Bachelor', 1, 1),
+(N'Foundations of Quantum Computing', N'COMP101', 3, N'Theory', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'Machine Learning with Python', N'COMP201', 4, N'Theory', N'Bachelor', 5, 2), -- Corrected MajorID (no shift)
+(N'Advanced Data Structures in C++', N'COMP301', 3, N'Theory', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'Principles of Distributed Systems', N'COMP401', 3, N'Practical', N'Bachelor', 2, 1), -- Corrected MajorID (no shift)
+(N'Cybersecurity Essentials for Modern Networks', N'COMP501', 2, N'Practical', N'Bachelor', 4, 1), -- Corrected MajorID (no shift)
+(N'Digital Signal Processing Applications', N'COMP601', 3, N'Theory', N'Bachelor', 7, 2), -- Corrected MajorID (no shift)
+(N'Database Internals: A Deep Dive', N'COMP701', 4, N'Theory', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'Operating System Design and Implementation', N'COMP801', 3, N'Theory', N'Bachelor', 2, 1), -- Corrected MajorID (no shift)
+(N'Artificial Intelligence: Foundations & Algorithms', N'COMP901', 3, N'Theory', N'Bachelor', 3, 1), -- Corrected MajorID (no shift)
+(N'Software Engineering: Best Practices', N'COMP1000', 2, N'Practical', N'Bachelor', 2, 1), -- Corrected MajorID (no shift)
 
-(N'Software Development Life Cycle', 'SOFT101', 3, N'Theory', N'Bachelor', 2, 1),
-(N'Agile Methodologies', 'SOFT201', 2, N'Practical', N'Bachelor', 2, 1),
-(N'Quality Assurance', 'SOFT301', 3, N'Theory', N'Bachelor', 2, 1),
-(N'Mobile Application Dev', 'SOFT401', 3, N'Practical', N'Bachelor', 2, 1),
-(N'Enterprise Systems', 'SOFT501', 4, N'Theory', N'Bachelor', 2, 1),
+(N'Network Protocols and Architecture', N'COMP1001', 3, N'Theory', N'Master', 4, 1), -- Corrected MajorID (no shift)
+(N'Embedded Systems Programming', N'COMP1002', 4, N'Practical', N'Master', 7, 2), -- Corrected MajorID (no shift)
+(N'Computer Vision: Algorithms and Applications', N'COMP1003', 3, N'Theory', N'Master', 3, 1), -- Corrected MajorID (no shift)
+(N'Cloud Computing: Concepts & Paradigms', N'COMP1004', 3, N'Theory', N'Master', 1, 1), -- Corrected MajorID (no shift)
+(N'Web Development with React and Node.js', N'COMP1005', 2, N'Practical', N'Master', 2, 1), -- Corrected MajorID (no shift)
+(N'Parallel and Distributed Computing', N'ELEC101', 4, N'Theory', N'Bachelor', 5, 2), -- Corrected MajorID (no shift)
+(N'Computer Architecture: A Quantitative Approach', N'ELEC201', 3, N'Theory', N'Bachelor', 7, 2), -- Corrected MajorID (no shift)
+(N'Theory of Computation', N'ELEC301', 3, N'Practical', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'Big Data Analytics Handbook', 'ELEC401', 2, N'Theory', N'Bachelor', 6, 2), -- Corrected MajorID (no shift)
+(N'Game Development with Unity', N'ELEC501', 3, N'Theory', N'Bachelor', 3, 1), -- Corrected MajorID (no shift)
 
-(N'Deep Learning', 'AI101', 4, N'Theory', N'Master', 3, 1),
-(N'Reinforcement Learning', 'AI201', 3, N'Theory', N'Master', 3, 1),
-(N'Computer Vision', 'AI301', 3, N'Theory', N'Master', 3, 1),
-(N'Big Data Analytics', 'AI401', 2, N'Practical', N'Master', 3, 1),
-(N'Intelligent Agents', 'AI501', 3, N'Practical', N'Master', 3, 1),
+(N'Mobile Forensics: Investigations', N'MECH101', 4, N'Theory', N'Master', 4, 1), -- Corrected MajorID (no shift)
+(N'Robotics: Kinematics, Dynamics, and Control', N'MECH201', 3, N'Theory', N'Master', 7, 2), -- Corrected MajorID (no shift)
+(N'Introduction to Cryptography', N'MECH301', 3, N'Practical', N'Master', 9, 3), -- Corrected MajorID (no shift)
+(N'Neural Networks and Deep Learning', N'MECH401', 3, N'Theory', N'Master', 3, 1), -- Corrected MajorID (no shift)
+(N'Quantum Information Science', N'MECH501', 2, N'Practical', N'Master', 1, 1), -- Corrected MajorID (no shift)
+(N'Structural Engineering', 'CIVL101', 4, N'Theory', N'Bachelor', 10, 4), -- Corrected MajorID (no shift)
+(N'Reinforced Concrete Design', 'CIVL201', 3, N'Practical', N'Bachelor', 10, 4), -- Corrected MajorID (no shift)
+(N'Geotechnical Engineering', 'CIVL301', 3, N'Theory', N'Bachelor', 10, 4), -- Corrected MajorID (no shift)
+(N'Transportation Engineering', 'CIVL401', 3, N'Theory', N'Bachelor', 10, 4), -- Corrected MajorID (no shift)
+(N'Hydrology Fundamentals', 'CIVL501', 2, N'Theory', N'Bachelor', 10, 4), -- Corrected MajorID (no shift)
 
-(N'Information Security', 'CYB101', 3, N'Theory', N'Master', 4, 1),
-(N'Digital Forensics', 'CYB201', 3, N'Practical', N'Master', 4, 1),
-(N'Cloud Security', 'CYB301', 2, N'Theory', N'Master', 4, 1),
-(N'Blockchain Security', 'CYB401', 2, N'Practical', N'Master', 4, 1),
-(N'Security Audit', 'CYB501', 3, N'Theory', N'Master', 4, 1),
+(N'Advanced Earthquake Engineering', 'EQ101', 4, N'Theory', N'Master', 11, 4), -- Corrected MajorID (no shift)
+(N'Seismic Performance Assessment', 'EQ201', 3, N'Practical', N'Master', 11, 4), -- Corrected MajorID (no shift)
+(N'Structural Health Monitoring', 'EQ301', 3, N'Theory', N'Master', 11, 4), -- Corrected MajorID (no shift)
+(N'Disaster Resilience Planning', 'EQ401', 2, N'Theory', N'Master', 11, 4), -- Corrected MajorID (no shift)
+(N'Dynamic Response of Structures', 'EQ501', 3, N'Theory', N'Master', 11, 4), -- Corrected MajorID (no shift)
+(N'Chemical Process Principles', 'CHEME101', 4, N'Theory', N'Bachelor', 12, 5), -- Corrected MajorID (no shift)
+(N'Separation Processes in Industry', 'CHEME102', 3, N'Theory', N'Bachelor', 12, 5), -- Corrected MajorID (no shift)
+(N'Chemical Reactor Design', 'CHEME103', 3, N'Theory', N'Bachelor', 12, 5), -- Corrected MajorID (no shift)
+(N'Biochemical Engineering', 'CHEME104', 2, N'Practical', N'Bachelor', 12, 5), -- Corrected MajorID (no shift)
+(N'Polymer Science Fundamentals', 'CHEME105', 3, N'Theory', N'Bachelor', 12, 5), -- Corrected MajorID (no shift)
 
-(N'Electric Circuits I', 'ELEC101', 4, N'Theory', N'Bachelor', 5, 2),
-(N'Electromagnetic Fields', 'ELEC201', 3, N'Theory', N'Bachelor', 5, 2),
-(N'Digital Signal Processing', 'ELEC301', 3, N'Practical', N'Bachelor', 5, 2),
-(N'Linear Systems', 'ELEC401', 2, N'Theory', N'Bachelor', 5, 2),
-(N'Power System Analysis', 'ELEC501', 3, N'Theory', N'Bachelor', 5, 2),
+(N'Mathematical Logic & Set Theory', 'MATHM101', 3, N'Theory', N'Bachelor', 13, 6), -- Corrected MajorID (no shift)
+(N'Real Analysis & Measure Theory', 'MATHM102', 4, N'Theory', N'Bachelor', 13, 6), -- Corrected MajorID (no shift)
+(N'Graph Theory Applications', 'MATHM103', 3, N'Theory', N'Bachelor', 13, 6), -- Corrected MajorID (no shift)
+(N'Abstract Algebra II', 'MATHM104', 3, N'Theory', N'Bachelor', 13, 6), -- Corrected MajorID (no shift)
+(N'Complex Analysis', 'MATHM105', 3, N'Theory', N'Bachelor', 13, 6), -- Corrected MajorID (no shift)
+(N'Partial Differential Equations', 'MATHM201', 4, N'Theory', N'Master', 14, 6), -- Corrected MajorID (no shift)
+(N'Computational Mathematics', 'MATHM202', 3, N'Practical', N'Master', 14, 6), -- Corrected MajorID (no shift)
+(N'Stochastic Processes', 'MATHM203', 3, N'Theory', N'Master', 14, 6), -- Corrected MajorID (no shift)
+(N'Time Series Analysis', 'MATHM204', 2, N'Theory', N'Master', 14, 6), -- Corrected MajorID (no shift)
+(N'Convex Optimization Methods', 'MATHM205', 3, N'Practical', N'Master', 14, 6), -- Corrected MajorID (no shift)
 
-(N'Advanced Robotics Control', 'CTRL101', 4, N'Theory', N'Master', 6, 2),
-(N'Adaptive Control', 'CTRL201', 3, N'Theory', N'Master', 6, 2),
-(N'Nonlinear Control Systems', 'CTRL301', 2, N'Practical', N'Master', 6, 2),
-(N'Optimal Control', 'CTRL401', 3, N'Theory', N'Master', 6, 2),
-(N'Distributed Control', 'CTRL501', 3, N'Practical', N'Master', 6, 2),
+(N'Classical Mechanics Advanced', 'PHY101', 4, N'Theory', N'Bachelor', 15, 7), -- Corrected MajorID (no shift)
+(N'Quantum Field Theory Introduction', 'PHY201', 3, N'Theory', N'Bachelor', 15, 7), -- Corrected MajorID (no shift)
+(N'Statistical Physics Principles', 'PHY301', 3, N'Theory', N'Bachelor', 15, 7), -- Corrected MajorID (no shift)
+(N'Cosmology & Astrophysics', 'PHY401', 3, N'Theory', N'Bachelor', 15, 7), -- Corrected MajorID (no shift)
+(N'Experimental Physics Lab', 'PHY501', 3, N'Practical', N'Bachelor', 15, 7), -- Corrected MajorID (no shift)
+(N'Quantum Computing Principles', 'PHY601', 4, N'Theory', N'Master', 16, 7), -- Corrected MajorID (no shift)
+(N'Nanomaterials Physics', 'PHY701', 3, N'Theory', N'Master', 16, 7), -- Corrected MajorID (no shift)
+(N'Optical Physics & Devices', 'PHY801', 3, N'Theory', N'Master', 16, 7), -- Corrected MajorID (no shift)
+(N'Particle Physics Fundamentals', 'PHY901', 2, N'Theory', N'Master', 16, 7), -- Corrected MajorID (no shift)
+(N'Astrophysics and Cosmology', 'PHY001', 3, N'Theory', N'Master', 16, 7), -- Corrected MajorID (no shift)
 
-(N'Electronic Devices', 'ELN101', 3, N'Theory', N'Bachelor', 7, 2),
-(N'Integrated Circuit Design', 'ELN201', 4, N'Practical', N'Bachelor', 7, 2),
-(N'Analog Communication', 'ELN301', 3, N'Theory', N'Bachelor', 7, 2),
-(N'RF and Microwave Engineering', 'ELN401', 3, N'Practical', N'Bachelor', 7, 2),
-(N'VLSI Design', 'ELN501', 2, N'Theory', N'Bachelor', 7, 2),
+(N'Inorganic Chemistry Principles', 'CHEMC101', 4, N'Theory', N'Bachelor', 17, 8), -- Corrected MajorID (no shift)
+(N'Spectroscopy Techniques', 'CHEMC201', 3, N'Practical', N'Bachelor', 17, 8), -- Corrected MajorID (no shift)
+(N'Electrochemistry & Applications', 'CHEMC301', 3, N'Theory', N'Bachelor', 17, 8), -- Corrected MajorID (no shift)
+(N'Environmental Chemistry & Pollution', 'CHEMC401', 2, N'Theory', N'Bachelor', 17, 8), -- Corrected MajorID (no shift)
+(N'Polymer Chemistry Fundamentals', 'CHEMC501', 3, N'Theory', N'Bachelor', 17, 8), -- Corrected MajorID (no shift)
+(N'Advanced Organic Synthesis', 'CHEMC601', 4, N'Theory', N'Master', 18, 8), -- Corrected MajorID (no shift)
+(N'Materials Chemistry', 'CHEMC701', 3, N'Practical', N'Master', 18, 8), -- Corrected MajorID (no shift)
+(N'Computational Chemistry Methods', 'CHEMC801', 3, N'Theory', N'Master', 18, 8), -- Corrected MajorID (no shift)
+(N'Pharmaceutical Chemistry', 'CHEMC901', 2, N'Theory', N'Master', 18, 8), -- Corrected MajorID (no shift)
+(N'Catalysis Principles', 'CHEMC001', 3, N'Theory', N'Master', 18, 8), -- Corrected MajorID (no shift)
 
-(N'Mechanics of Materials', 'MECH101', 3, N'Theory', N'Bachelor', 8, 3),
-(N'Machine Design', 'MECH201', 3, N'Practical', N'Bachelor', 8, 3),
-(N'Manufacturing Processes', 'MECH301', 4, N'Theory', N'Bachelor', 8, 3),
-(N'Finite Element Analysis', 'MECH401', 3, N'Practical', N'Bachelor', 8, 3),
-(N'Dynamics of Machinery', 'MECH501', 3, N'Theory', N'Bachelor', 8, 3),
+(N'General Biology Principles', 'BIOL101', 4, N'Theory', N'Bachelor', 19, 9), -- Corrected MajorID (no shift)
+(N'Microbiology & Immunology', 'BIOL201', 3, N'Practical', N'Bachelor', 19, 9), -- Corrected MajorID (no shift)
+(N'Ecology & Ecosystems', 'BIOL301', 3, N'Theory', N'Bachelor', 19, 9), -- Corrected MajorID (no shift)
+(N'Plant Biology (Botany)', 'BIOL401', 2, N'Theory', N'Bachelor', 19, 9), -- Corrected MajorID (no shift)
+(N'Animal Biology (Zoology)', 'BIOL501', 3, N'Theory', N'Bachelor', 19, 9), -- Corrected MajorID (no shift)
+(N'Biotechnology Applications', 'BIOL601', 4, N'Practical', N'Master', 20, 9), -- Corrected MajorID (no shift)
+(N'Neurobiology & Behavior', 'BIOL701', 3, N'Theory', N'Master', 20, 9), -- Corrected MajorID (no shift)
+(N'Virology & Infectious Diseases', 'BIOL801', 3, N'Theory', N'Master', 20, 9), -- Corrected MajorID (no shift)
+(N'Bioinformatics & Genomics', 'BIOL901', 2, N'Practical', N'Master', 20, 9), -- Corrected MajorID (no shift)
+(N'Pharmacology & Drug Action', 'BIOL001', 3, N'Theory', N'Master', 20, 9), -- Corrected MajorID (no shift)
 
-(N'Advanced Fluid Dynamics', 'MFD101', 4, N'Theory', N'Master', 9, 3),
-(N'Turbomachinery', 'MFD201', 3, N'Theory', N'Master', 9, 3),
-(N'Convective Heat Transfer', 'MFD301', 3, N'Theory', N'Master', 9, 3),
-(N'Hydraulic Systems', 'MFD401', 2, N'Practical', N'Master', 9, 3),
-(N'Gas Dynamics', 'MFD501', 3, N'Theory', N'Master', 9, 3),
+(N'Contemporary Persian Poetry', 'PL101', 4, N'Theory', N'Bachelor', 21, 10), -- Corrected MajorID (no shift)
+(N'Classical Persian Literature', 'PL102', 3, N'Theory', N'Bachelor', 21, 10), -- Corrected MajorID (no shift)
+(N'Modern Persian Literature', 'PL103', 3, N'Theory', N'Bachelor', 21, 10), -- Corrected MajorID (no shift)
+(N'Persian Prose & Narrative', 'PL104', 2, N'Theory', N'Bachelor', 21, 10), -- Corrected MajorID (no shift)
+(N'Critical Literary Theory', 'PL105', 3, N'Theory', N'Bachelor', 21, 10), -- Corrected MajorID (no shift)
 
-(N'Structural Engineering', 'CIVL101', 4, N'Theory', N'Bachelor', 10, 4),
-(N'Reinforced Concrete', 'CIVL201', 3, N'Practical', N'Bachelor', 10, 4),
-(N'Geotechnical Engineering', 'CIVL301', 3, N'Theory', N'Bachelor', 10, 4),
-(N'Transportation Engineering', 'CIVL401', 3, N'Theory', N'Bachelor', 10, 4),
-(N'Hydrology', 'CIVL501', 2, N'Theory', N'Bachelor', 10, 4),
+(N'Constitutional Law', 'LAW101', 3, N'Theory', N'Bachelor', 22, 11), -- Corrected MajorID (no shift)
+(N'Criminal Law', 'LAW102', 4, N'Theory', N'Bachelor', 22, 11), -- Corrected MajorID (no shift)
+(N'Civil Law', 'LAW103', 3, N'Theory', N'Bachelor', 22, 11), -- Corrected MajorID (no shift)
+(N'Contract Law', 'LAW104', 2, N'Theory', N'Bachelor', 22, 11), -- Corrected MajorID (no shift)
+(N'International Law Basics', 'LAW105', 3, N'Theory', N'Bachelor', 22, 11), -- Corrected MajorID (no shift)
 
-(N'Advanced Earthquake Design', 'EQ101', 4, N'Theory', N'Master', 11, 4),
-(N'Seismic Performance', 'EQ201', 3, N'Practical', N'Master', 11, 4),
-(N'Structural Health Monitoring', 'EQ301', 3, N'Theory', N'Master', 11, 4),
-(N'Disaster Resilience', 'EQ401', 2, N'Theory', N'Master', 11, 4),
-(N'Dynamic Response of Structures', 'EQ501', 3, N'Theory', N'Master', 11, 4),
+(N'International Law', 'LAW201', 3, N'Master', N'Master', 23, 11), -- Corrected MajorID (no shift)
+(N'Human Rights Law', 'LAW202', 3, N'Theory', N'Master', 23, 11), -- Corrected MajorID (no shift)
+(N'International Trade Law', 'LAW203', 3, N'Theory', N'Master', 23, 11), -- Corrected MajorID (no shift)
+(N'International Dispute Resolution', 'LAW204', 2, N'Theory', N'Master', 23, 11), -- Corrected MajorID (no shift)
+(N'Comparative Law', 'LAW205', 3, N'Theory', N'Master', 23, 11), -- Corrected MajorID (no shift)
 
-(N'Chemical Process Principles', 'CHEME101', 4, N'Theory', N'Bachelor', 12, 5),
-(N'Separation Processes', 'CHEME102', 3, N'Theory', N'Bachelor', 12, 5),
-(N'Chemical Reactor Design', 'CHEME103', 3, N'Theory', N'Bachelor', 12, 5),
-(N'Biochemical Engineering', 'CHEME104', 2, N'Practical', N'Bachelor', 12, 5),
-(N'Polymer Science', 'CHEME105', 3, N'Theory', N'Bachelor', 12, 5),
+(N'Public Policy', 'POL101', 3, N'Theory', N'Bachelor', 24, 12), -- Corrected MajorID (no shift)
+(N'Political Theory', 'POL102', 3, N'Theory', N'Bachelor', 24, 12), -- Corrected MajorID (no shift)
+(N'International Relations', 'POL103', 3, N'Theory', N'Bachelor', 24, 12), -- Corrected MajorID (no shift)
+(N'Policy Analysis', 'POL104', 2, N'Theory', N'Bachelor', 24, 12), -- Corrected MajorID (no shift)
+(N'Governance', 'POL105', 3, N'Theory', N'Bachelor', 24, 12), -- Corrected MajorID (no shift)
 
-(N'Mathematical Logic', 'MATHM101', 3, N'Theory', N'Bachelor', 13, 6),
-(N'Real Analysis', 'MATHM102', 4, N'Theory', N'Bachelor', 13, 6),
-(N'Graph Theory', 'MATHM103', 3, N'Theory', N'Bachelor', 13, 6),
-(N'Abstract Algebra II', 'MATHM104', 3, N'Theory', N'Bachelor', 13, 6),
-(N'Complex Analysis', 'MATHM105', 3, N'Theory', N'Bachelor', 13, 6),
+(N'Operations Management', 'MGT101', 3, N'Theory', N'Bachelor', 25, 13), -- Corrected MajorID (no shift)
+(N'Supply Chain Management', 'MGT102', 3, N'Theory', N'Bachelor', 25, 13), -- Corrected MajorID (no shift)
+(N'Quality Control', 'MGT103', 2, N'Theory', N'Bachelor', 25, 13), -- Corrected MajorID (no shift)
+(N'Production Planning', 'MGT104', 3, N'Theory', N'Bachelor', 25, 13), -- Corrected MajorID (no shift)
+(N'Industrial Safety', 'MGT105', 2, N'Theory', N'Bachelor', 25, 13), -- Corrected MajorID (no shift)
 
-(N'Partial Differential Equations', 'MATHM201', 4, N'Theory', N'Master', 14, 6),
-(N'Computational Mathematics', 'MATHM202', 3, N'Practical', N'Master', 14, 6),
-(N'Stochastic Processes', 'MATHM203', 3, N'Theory', N'Master', 14, 6),
-(N'Time Series Analysis', 'MATHM204', 2, N'Theory', N'Master', 14, 6),
-(N'Convex Optimization', 'MATHM205', 3, N'Practical', N'Master', 14, 6),
+(N'Financial Management', 'MGT201', 3, N'Theory', N'Master', 26, 13), -- Corrected MajorID (no shift)
+(N'Investment Analysis', 'MGT202', 3, N'Theory', N'Master', 26, 13), -- Corrected MajorID (no shift)
+(N'Risk Management', 'MGT203', 3, N'Theory', N'Master', 26, 13), -- Corrected MajorID (no shift)
+(N'Corporate Finance', 'MGT204', 2, N'Theory', N'Master', 26, 13), -- Corrected MajorID (no shift)
+(N'Portfolio Management', 'MGT205', 3, N'Theory', N'Master', 26, 13), -- Corrected MajorID (no shift)
 
-(N'Classical Mechanics', 'PHY101', 4, N'Theory', N'Bachelor', 15, 7),
-(N'Quantum Field Theory', 'PHY201', 3, N'Theory', N'Bachelor', 15, 7),
-(N'Statistical Physics', 'PHY301', 3, N'Theory', N'Bachelor', 15, 7),
-(N'Cosmology', 'PHY401', 3, N'Theory', N'Bachelor', 15, 7),
-(N'Experimental Physics', 'PHY501', 3, N'Practical', N'Bachelor', 15, 7),
+(N'Clinical Psychology', 'PSY101', 3, N'Theory', N'Bachelor', 27, 14), -- Corrected MajorID (no shift)
+(N'Psychopathology', 'PSY102', 3, N'Theory', N'Bachelor', 27, 14), -- Corrected MajorID (no shift)
+(N'Therapeutic Techniques', 'PSY103', 2, N'Practical', N'Bachelor', 27, 14), -- Corrected MajorID (no shift)
+(N'Neuropsychology', 'PSY104', 3, N'Theory', N'Bachelor', 27, 14), -- Corrected MajorID (no shift)
+(N'Child Psychology', 'PSY105', 3, N'Theory', N'Bachelor', 27, 14), -- Corrected MajorID (no shift)
 
-(N'Quantum Computing', 'PHY601', 4, N'Theory', N'Master', 16, 7),
-(N'Nanomaterials Physics', 'PHY701', 3, N'Theory', N'Master', 16, 7),
-(N'Optical Physics', 'PHY801', 3, N'Theory', N'Master', 16, 7),
-(N'Particle Physics', 'PHY901', 2, N'Theory', N'Master', 16, 7),
-(N'Astrophysics', 'PHY001', 3, N'Theory', N'Master', 16, 7),
+(N'Educational Psychology', 'PSY201', 3, N'Theory', N'Master', 28, 14), -- Corrected MajorID (no shift)
+(N'Learning Theories', 'PSY202', 3, N'Theory', N'Master', 28, 14), -- Corrected MajorID (no shift)
+(N'Developmental Psychology', 'PSY203', 3, N'Theory', N'Master', 28, 14), -- Corrected MajorID (no shift)
+(N'Assessment Techniques', 'PSY204', 2, N'Practical', N'Master', 28, 14), -- Corrected MajorID (no shift)
+(N'Counseling', 'PSY205', 3, N'Theory', N'Master', 28, 14), -- Corrected MajorID (no shift)
 
-(N'Inorganic Chemistry', 'CHEMC101', 4, N'Theory', N'Bachelor', 17, 8),
-(N'Spectroscopy', 'CHEMC201', 3, N'Practical', N'Bachelor', 17, 8),
-(N'Electrochemistry', 'CHEMC301', 3, N'Theory', N'Bachelor', 17, 8),
-(N'Environmental Chemistry', 'CHEMC401', 2, N'Theory', N'Bachelor', 17, 8),
-(N'Polymer Chemistry', 'CHEMC501', 3, N'Theory', N'Bachelor', 17, 8),
+(N'English Literature', 'ENG101', 4, N'Theory', N'Bachelor', 29, 15), -- Corrected MajorID (no shift)
+(N'English Grammar', 'ENG102', 3, N'Theory', N'Bachelor', 29, 15), -- Corrected MajorID (no shift)
+(N'Literary Criticism', 'ENG103', 3, N'Theory', N'Bachelor', 29, 15), -- Corrected MajorID (no shift)
+(N'Creative Writing', 'ENG104', 2, N'Theory', N'Bachelor', 29, 15), -- Corrected MajorID (no shift)
+(N'Translation Studies', 'ENG105', 3, N'Theory', N'Bachelor', 29, 15), -- Corrected MajorID (no shift)
 
-(N'Advanced Organic Synthesis', 'CHEMC601', 4, N'Theory', N'Master', 18, 8),
-(N'Materials Chemistry', 'CHEMC701', 3, N'Practical', N'Master', 18, 8),
-(N'Computational Chemistry', 'CHEMC801', 3, N'Theory', N'Master', 18, 8),
-(N'Pharmaceutical Chemistry', 'CHEMC901', 2, N'Theory', N'Master', 18, 8),
-(N'Catalysis', 'CHEMC001', 3, N'Theory', N'Master', 18, 8),
+(N'Language Teaching Methods', 'ENG201', 3, N'Theory', N'Master', 30, 15), -- Corrected MajorID (no shift)
+(N'Curriculum Design', 'ENG202', 3, N'Theory', N'Master', 30, 15), -- Corrected MajorID (no shift)
+(N'Teaching Practicum', 'ENG203', 2, N'Practical', N'Master', 30, 15), -- Corrected MajorID (no shift)
+(N'Assessment in Language Teaching', 'ENG204', 3, N'Theory', N'Master', 30, 15), -- Corrected MajorID (no shift)
+(N'Second Language Acquisition', 'ENG205', 3, N'Theory', N'Master', 30, 15), -- Corrected MajorID (no shift)
 
-(N'General Biology', 'BIOL101', 4, N'Theory', N'Bachelor', 19, 9),
-(N'Microbiology', 'BIOL201', 3, N'Practical', N'Bachelor', 19, 9),
-(N'Ecology', 'BIOL301', 3, N'Theory', N'Bachelor', 19, 9),
-(N'Botany', 'BIOL401', 2, N'Theory', N'Bachelor', 19, 9),
-(N'Zoology', 'BIOL501', 3, N'Theory', N'Bachelor', 19, 9),
-
-(N'Biotechnology', 'BIOL601', 4, N'Practical', N'Master', 20, 9),
-(N'Neurobiology', 'BIOL701', 3, N'Theory', N'Master', 20, 9),
-(N'Virology', 'BIOL801', 3, N'Theory', N'Master', 20, 9),
-(N'Bioinformatics', 'BIOL901', 2, N'Practical', N'Master', 20, 9),
-(N'Pharmacology', 'BIOL001', 3, N'Theory', N'Master', 20, 9),
-
-(N'Persian Poetry', 'PL101', 4, N'Theory', N'Bachelor', 21, 10),
-(N'Classical Literature', 'PL102', 3, N'Theory', N'Bachelor', 21, 10),
-(N'Modern Literature', 'PL103', 3, N'Theory', N'Bachelor', 21, 10),
-(N'Persian Prose', 'PL104', 2, N'Theory', N'Bachelor', 21, 10),
-(N'Literary Criticism', 'PL105', 3, N'Theory', N'Bachelor', 21, 10),
-
-(N'Constitutional Law', 'LAW101', 3, N'Theory', N'Bachelor', 22, 11),
-(N'Criminal Law', 'LAW102', 4, N'Theory', N'Bachelor', 22, 11),
-(N'Civil Law', 'LAW103', 3, N'Theory', N'Bachelor', 22, 11),
-(N'Contract Law', 'LAW104', 2, N'Theory', N'Bachelor', 22, 11),
-(N'International Law Basics', 'LAW105', 3, N'Theory', N'Bachelor', 22, 11),
-
-(N'International Law', 'LAW201', 3, N'Master', N'Master', 23, 11),
-(N'Human Rights Law', 'LAW202', 3, N'Theory', N'Master', 23, 11),
-(N'International Trade Law', 'LAW203', 3, N'Theory', N'Master', 23, 11),
-(N'International Dispute Resolution', 'LAW204', 2, N'Theory', N'Master', 23, 11),
-(N'Comparative Law', 'LAW205', 3, N'Theory', N'Master', 23, 11),
-
-(N'Public Policy', 'POL101', 3, N'Theory', N'Bachelor', 24, 12),
-(N'Political Theory', 'POL102', 3, N'Theory', N'Bachelor', 24, 12),
-(N'International Relations', 'POL103', 3, N'Theory', N'Bachelor', 24, 12),
-(N'Policy Analysis', 'POL104', 2, N'Theory', N'Bachelor', 24, 12),
-(N'Governance', 'POL105', 3, N'Theory', N'Bachelor', 24, 12),
-
-(N'Operations Management', 'MGT101', 3, N'Theory', N'Bachelor', 25, 13),
-(N'Supply Chain Management', 'MGT102', 3, N'Theory', N'Bachelor', 25, 13),
-(N'Quality Control', 'MGT103', 2, N'Theory', N'Bachelor', 25, 13),
-(N'Production Planning', 'MGT104', 3, N'Theory', N'Bachelor', 25, 13),
-(N'Industrial Safety', 'MGT105', 2, N'Theory', N'Bachelor', 25, 13),
-
-(N'Financial Management', 'MGT201', 3, N'Theory', N'Master', 26, 13),
-(N'Investment Analysis', 'MGT202', 3, N'Theory', N'Master', 26, 13),
-(N'Risk Management', 'MGT203', 3, N'Theory', N'Master', 26, 13),
-(N'Corporate Finance', 'MGT204', 2, N'Theory', N'Master', 26, 13),
-(N'Portfolio Management', 'MGT205', 3, N'Theory', N'Master', 26, 13),
-
-(N'Clinical Psychology', 'PSY101', 3, N'Theory', N'Bachelor', 27, 14),
-(N'Psychopathology', 'PSY102', 3, N'Theory', N'Bachelor', 27, 14),
-(N'Therapeutic Techniques', 'PSY103', 2, N'Practical', N'Bachelor', 27, 14),
-(N'Neuropsychology', 'PSY104', 3, N'Theory', N'Bachelor', 27, 14),
-(N'Child Psychology', 'PSY105', 3, N'Theory', N'Bachelor', 27, 14),
-
-(N'Educational Psychology', 'PSY201', 3, N'Theory', N'Master', 28, 14),
-(N'Learning Theories', 'PSY202', 3, N'Theory', N'Master', 28, 14),
-(N'Developmental Psychology', 'PSY203', 3, N'Theory', N'Master', 28, 14),
-(N'Assessment Techniques', 'PSY204', 2, N'Practical', N'Master', 28, 14),
-(N'Counseling', 'PSY205', 3, N'Theory', N'Master', 28, 14),
-
-(N'English Literature', 'ENG101', 4, N'Theory', N'Bachelor', 29, 15),
-(N'English Grammar', 'ENG102', 3, N'Theory', N'Bachelor', 29, 15),
-(N'Literary Criticism', 'ENG103', 3, N'Theory', N'Bachelor', 29, 15),
-(N'Creative Writing', 'ENG104', 2, N'Theory', N'Bachelor', 29, 15),
-(N'Translation Studies', 'ENG105', 3, N'Theory', N'Bachelor', 29, 15),
-
-(N'Language Teaching Methods', 'ENG201', 3, N'Theory', N'Master', 30, 15),
-(N'Curriculum Design', 'ENG202', 3, N'Theory', N'Master', 30, 15),
-(N'Teaching Practicum', 'ENG203', 2, N'Practical', N'Master', 30, 15),
-(N'Assessment in Language Teaching', 'ENG204', 3, N'Theory', N'Master', 30, 15),
-(N'Second Language Acquisition', 'ENG205', 3, N'Theory', N'Master', 30, 15),
-
-(N'ریاضی عمومی 1', 'CE106', 3, N'Theory', N'Bachelor', 1, 1),
-(N'فیزیک 1', 'CE107', 3, N'Theory', N'Bachelor', 1, 1),
-(N'مبانی برنامه سازی', 'CE108', 3, N'Theory', N'Bachelor', 1, 1),
-(N'کارگاه کامپیوتر', 'CE109', 3, N'Practical', N'Bachelor', 1, 1),
-(N'آشنایی بامهندسی کامپیوتر', 'CE110', 3, N'Theory', N'Bachelor', 1, 1),
-(N'زبان عمومی', 'CE111', 3, N'Theory', N'Bachelor', 1, 1),
-(N'تربیت بدنی1', 'CE112', 3, N'Practical', N'Bachelor', 1, 1),
-(N'ریاضی عمومی 2', 'CE113', 3, N'Theory', N'Bachelor', 1, 1),
-(N'فیزیک 2', 'CE114', 3, N'Theory', N'Bachelor', 1, 1),
-(N'برنامه سازی پیشرفته', 'CE115', 3, N'Theory', N'Bachelor', 1, 1),
-(N'ساختمان گسسته', 'CE116', 3, N'Theory', N'Bachelor', 1, 1),
-(N'معادلات دیفرانسیل', 'CE117', 3, N'Theory', N'Bachelor', 1, 1),
-(N'آز فیزیک الکتریسیته', 'CE118', 3, N'Practical', N'Bachelor', 1, 1),
-(N'آمار و احتمال مهندسی', 'CE119', 3, N'Theory', N'Bachelor', 1, 1),
-(N'ریاضی مهندسی', 'CE120', 3, N'Theory', N'Bachelor', 1, 1),
-(N'مدارهای الکتریکی', 'CE121', 3, N'Theory', N'Bachelor', 1, 1),
-(N'ساختمان داده', 'CE122', 3, N'Theory', N'Bachelor', 1, 1),
-(N'طراحی دیحیتال1', 'CE123', 3, N'Theory', N'Bachelor', 1, 1),
-(N'آز طراحی دیحیتال1', 'CE124', 3, N'Practical', N'Bachelor', 1, 1),
-(N'معماری و سازمان کامپیوتر', 'CE125', 3, N'Theory', N'Bachelor', 1, 1),
-(N'شبکه های کامپیوتری', 'CE126', 3, N'Theory', N'Bachelor', 1, 1),
-(N'طراحی الگوریتم ها', 'CE127', 3, N'Theory', N'Bachelor', 1, 1),
-(N'پایگاه داده ها1', 'CE128', 3, N'Theory', N'Bachelor', 1, 1),
-(N'آز شبکه های کامپیوتری', 'CE129', 3, N'Practical', N'Bachelor', 1, 1),
-(N'زبان تخصصی کامپیوتر', 'CE130', 3, N'Theory', N'Bachelor', 1, 1),
-(N'تربیت بدنی2', 'CE131', 3, N'Practical', N'Bachelor', 1, 1),
-(N'ریز پردازنده', 'CE132', 3, N'Theory', N'Bachelor', 1, 1),
-(N'سیستم عامل', 'CE133', 3, N'Theory', N'Bachelor', 1, 1),
-(N'سیگنال ها و سیستم ها', 'CE134', 3, N'Theory', N'Bachelor', 1, 1),
-(N'هوش مصنوعی', 'CE135', 3, N'Theory', N'Bachelor', 1, 1),
-(N'نظریه زبان ها و ماشین ها', 'CE136', 3, N'Theory', N'Bachelor', 1, 1),
-(N'آز سیستم عامل', 'CE137', 3, N'Practical', N'Bachelor', 1, 1),
-(N'آز ریزپردازنده', 'CE138', 3, N'Practical', N'Bachelor', 1, 1),
-(N'ارائه مطالب علمی و فنی', 'CE139', 3, N'Theory', N'Bachelor', 1, 1),
-(N'شبکه های کامپیوتری 2', 'CE140', 3, N'Theory', N'Bachelor', 1, 1),
-(N'محاسبات ابری', 'CE141', 3, N'Theory', N'Bachelor', 1, 1),
-(N'مهندسی نرم افزار1', 'CE142', 3, N'Theory', N'Bachelor', 1, 1),
-(N'آز مهندسی نرم', 'CE143', 3, N'Practical', N'Bachelor', 1, 1),
-(N'کامپایلر', 'CE144', 3, N'Theory', N'Bachelor', 1, 1),
-(N'آز پایگاه داده', 'CE145', 3, N'Theory', N'Bachelor', 1, 1),
-(N'پروژه کارشناسی', 'CE146', 3, N'Practical', N'Bachelor', 1, 1),
-(N'مهندسی نرم افزار2', 'CE147', 3, N'Theory', N'Bachelor', 1, 1),
-(N'مبانی داده کاوی', 'CE148', 3, N'Theory', N'Bachelor', 1, 1),
-(N'پایگاه داده ها2', 'CE149', 3, N'Theory', N'Bachelor', 1, 1),
-(N'گراف کاوی', 'CE150', 3, N'Theory', N'Bachelor', 1, 1),
-(N'مبانی هوش محاسباتی', 'CE151', 3, N'Theory', N'Bachelor', 1, 1);
+-- Original Persian courses (Course IDs 76-151) remain as provided by user
+-- Note: MajorID=1 for these courses will also be shifted to MajorID=1 (no shift needed anymore)
+(N'ریاضی عمومی 1', 'CE106', 3, N'Theory', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'فیزیک 1', 'CE107', 3, N'Theory', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'مبانی برنامه سازی', 'CE108', 3, N'Theory', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'کارگاه کامپیوتر', 'CE109', 3, N'Practical', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'آشنایی بامهندسی کامپیوتر', 'CE110', 3, N'Theory', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'زبان عمومی', 'CE111', 3, N'Theory', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'تربیت بدنی1', 'CE112', 3, N'Practical', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'ریاضی عمومی 2', 'CE113', 3, N'Theory', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'فیزیک 2', 'CE114', 3, N'Theory', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'برنامه سازی پیشرفته', 'CE115', 3, N'Theory', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'ساختمان گسسته', 'CE116', 3, N'Theory', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'معادلات دیفرانسیل', 'CE117', 3, N'Theory', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'آز فیزیک الکتریسیته', 'CE118', 3, N'Practical', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'آمار و احتمال مهندسی', 'CE119', 3, N'Theory', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'ریاضی مهندسی', 'CE120', 3, N'Theory', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'مدارهای الکتریکی', 'CE121', 3, N'Theory', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'ساختمان داده', 'CE122', 3, N'Theory', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'طراحی دیحیتال1', 'CE123', 3, N'Theory', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'آز طراحی دیحیتال1', 'CE124', 3, N'Practical', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'معماری و سازمان کامپیوتر', 'CE125', 3, N'Theory', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'شبکه های کامپیوتری', 'CE126', 3, N'Theory', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'طراحی الگوریتم ها', 'CE127', 3, N'Theory', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'پایگاه داده ها1', 'CE128', 3, N'Theory', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'آز شبکه های کامپیوتری', 'CE129', 3, N'Practical', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'زبان تخصصی کامپیوتر', 'CE130', 3, N'Theory', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'تربیت بدنی2', 'CE131', 3, N'Practical', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'ریز پردازنده', 'CE132', 3, N'Theory', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'سیستم عامل', 'CE133', 3, N'Theory', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'سیگنال ها و سیستم ها', 'CE134', 3, N'Theory', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'هوش مصنوعی', 'CE135', 3, N'Theory', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'نظریه زبان ها و ماشین ها', 'CE136', 3, N'Theory', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'آز سیستم عامل', 'CE137', 3, N'Practical', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'آز ریزپردازنده', 'CE138', 3, N'Practical', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'ارائه مطالب علمی و فنی', 'CE139', 3, N'Theory', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'شبکه های کامپیوتری 2', 'CE140', 3, N'Theory', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'محاسبات ابری', 'CE141', 3, N'Theory', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'مهندسی نرم افزار1', 'CE142', 3, N'Theory', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'آز مهندسی نرم', 'CE143', 3, N'Practical', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'کامپایلر', 'CE144', 3, N'Theory', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'آز پایگاه داده', 'CE145', 3, N'Theory', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'پروژه کارشناسی', 'CE146', 3, N'Practical', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'مهندسی نرم افزار2', 'CE147', 3, N'Theory', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'مبانی داده کاوی', 'CE148', 3, N'Theory', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'پایگاه داده ها2', 'CE149', 3, N'Theory', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'گراف کاوی', 'CE150', 3, N'Theory', N'Bachelor', 1, 1), -- Corrected MajorID (no shift)
+(N'مبانی هوش محاسباتی', 'CE151', 3, N'Theory', N'Bachelor', 1, 1); -- Corrected MajorID (no shift)

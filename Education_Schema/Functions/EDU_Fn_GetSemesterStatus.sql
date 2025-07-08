@@ -1,9 +1,14 @@
 ﻿USE DB_project;
 GO
 
-DROP FUNCTION IF EXISTS Education.fn_GetSemesterStatus;
+-- Drop old function name if it exists (fn_GetSemesterStatus)
+DROP FUNCTION IF EXISTS Education.fn_GetSemesterStatus; 
+GO
+-- Drop the new function name (CalculateSemesterStatus) in case it was partially created
+DROP FUNCTION IF EXISTS Education.CalculateSemesterStatus; 
+GO
 
-CREATE FUNCTION Education.fn_GetSemesterStatus
+CREATE FUNCTION Education.CalculateSemesterStatus -- CORRECTED: Function name changed to CalculateSemesterStatus
 (
     @InputGradePointAverage DECIMAL(4,2)
 )
@@ -17,3 +22,4 @@ BEGIN
         END
     )
 END;
+GO

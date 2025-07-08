@@ -8,7 +8,7 @@ CREATE TABLE Education.Instructors (
     FacultyMemberID INT PRIMARY KEY IDENTITY(30000,10),
     NationalIdentityCode NVARCHAR(10) UNIQUE NOT NULL,       
     PrimaryFirstName NVARCHAR(60) NOT NULL,              
-    PrimaryLastName NVARCHAR(60) NOT NULL,              -- CORRECTED: Was 'NOT PARENT', now 'NOT NULL'
+    PrimaryLastName NVARCHAR(60) NOT NULL,              
     FatherFullName NVARCHAR(60),                      
     DateOfBirth DATE NOT NULL,                      
     GenderCode CHAR(1),
