@@ -2,6 +2,7 @@ USE DB_project;
 GO
 
 DROP FUNCTION IF EXISTS Library.RecommendBooksForStudent;
+GO 
 
 CREATE FUNCTION Library.RecommendBooksForStudent
 (
@@ -11,7 +12,7 @@ RETURNS TABLE
 AS
 RETURN
 (
-    WITH CurrentMemberBooks AS (
+    WITH CurrentMemberBooks AS ( -- SEMICOLON REMOVED FROM HERE
         SELECT DISTINCT book_copy_details.AssociatedBookID
         FROM Library.Borrowing AS loan_records
         JOIN Library.BookCopies AS book_copy_details 
@@ -45,3 +46,4 @@ RETURN
     JOIN Library.Books AS book_master_data ON recommended_book_info.AssociatedBookID = book_master_data.BookID
     ORDER BY recommended_book_info.RecommendationScore DESC
 );
+GO

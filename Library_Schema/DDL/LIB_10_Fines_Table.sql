@@ -1,10 +1,11 @@
 USE DB_project;
+GO
 
 DROP TABLE IF EXISTS Library.Fines;
 
 CREATE TABLE Library.Fines (
     FineRecordID INT PRIMARY KEY IDENTITY(1,1),
-    MemberAccountID INT FOREIGN KEY REFERENCES Library.Members(MemberID),
+    MemberAccountID INT FOREIGN KEY REFERENCES Library.Members(LibraryMemberID), -- Corrected column name here
     FineAmount DECIMAL(12,2),
     IsFinePaidStatus BIT DEFAULT 0,
     FineDescription NVARCHAR(250),
