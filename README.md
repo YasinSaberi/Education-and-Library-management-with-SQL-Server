@@ -89,8 +89,7 @@ The database is built on **SQL Server**, and its codebase is designed to be clea
 * **Management Tool:** SQL Server Management Studio (SSMS)
 * **Language:** T-SQL
 
-```
-mermaid
+```mermaid
 erDiagram
     %% EDUCATION SCHEMA
     Departments {
