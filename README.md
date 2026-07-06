@@ -19,6 +19,8 @@ This project implements a comprehensive relational database management system de
 
 The database is built on **Microsoft SQL Server**, and the codebase is designed to be clean, organized, and easily navigable, with consistent naming conventions and formatting throughout.
 
+<img width="2752" height="1536" alt="University_Database_Architecture_and_Features" src="https://github.com/user-attachments/assets/fbdab9fd-8115-4f9c-8efb-27d382ab2bc9" />
+
 ## 📑 Table of Contents
 
 - [Key Features](#-key-features)
