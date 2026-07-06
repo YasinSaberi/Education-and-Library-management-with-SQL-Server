@@ -89,6 +89,184 @@ The database is built on **SQL Server**, and its codebase is designed to be clea
 * **Management Tool:** SQL Server Management Studio (SSMS)
 * **Language:** T-SQL
 
+```
+mermaid
+erDiagram
+    %% EDUCATION SCHEMA
+    Departments {
+        int DepartmentID PK
+        nvarchar DepartmentName UK
+    }
+    Majors {
+        int AcademicMajorID PK
+        nvarchar MajorTitle
+        int ResponsibleDepartmentID FK
+    }
+    Students {
+        int UniversityStudentID PK
+        nvarchar NationalIdentityNumber UK
+        int EnrolledDepartmentID FK
+        int ChosenMajorID FK
+    }
+    Instructors {
+        int FacultyMemberID PK
+        nvarchar NationalIdentityCode UK
+        int AssignedDepartmentID FK
+    }
+    Courses {
+        int CurriculumCourseID PK
+        nvarchar OfficialCourseName UK
+        int AssociatedMajorID FK
+        int OwningDepartmentID FK
+    }
+    Semesters {
+        int AcademicTermID PK
+        nvarchar TermIdentifier UK
+    }
+    CourseOfferings {
+        int CourseOfferingID PK
+        int OfferedCourseID FK
+        int OfferingSemesterID FK
+        int AssignedInstructorID FK
+    }
+    ClassSchedules {
+        int ClassScheduleID PK
+        int CourseOfferingID FK
+    }
+    ExamSchedules {
+        int ExaminationScheduleID PK
+        int ScheduledOfferingID FK
+    }
+    Enrollments {
+        int CourseEnrollmentID PK
+        int EnrolledStudentID FK
+        int EnrolledOfferingID
+    }
+    StudentCourses {
+        int StudentCourseRecordID PK
+        int RelatedEnrollmentID FK
+    }
+    StudentStatusChanges {
+        int StatusChangeLogID PK
+        int AffectedStudentID FK
+        int ReportingSemesterID FK
+    }
+    CurriculumPlan {
+        int CurriculumPlanRecordID PK
+        int MajorProgramID FK
+        int CourseInCurriculumID FK
+    }
+    Admins {
+        int AdministratorID PK
+        nvarchar NationalIdentifier UK
+    }
+    Addresses {
+        int AddressIdentifier PK
+        nvarchar AssociatedEntityID UK
+    }
+    Userlink {
+        int EntityLinkID PK
+        nvarchar LinkedEntityNationalCode UK
+    }
+    UserAccounts {
+        nvarchar UserNationalCode PK
+    }
+    EventLogs {
+        int LogEntryID PK
+    }
+
+    %% LIBRARY SCHEMA
+    Authors {
+        int AuthorIdentifier PK
+    }
+    Publishers {
+        int BookPublisherID PK
+    }
+    Categories {
+        int BookCategoryID PK
+    }
+    Books {
+        int BookID PK
+        int PublishingHouseID FK
+        int LiteraryCategoryID FK
+    }
+    BookAuthors {
+        int BookID PK,FK
+        int AuthorID PK,FK
+    }
+    BookCopies {
+        int BookCopyID PK
+        int AssociatedBookID FK
+    }
+    Members {
+        int LibraryMemberID PK
+        int AssociatedStudentID FK
+    }
+    Borrowing {
+        int BorrowingRecordID PK
+        int LibraryMemberID FK
+        int BorrowedCopyID FK
+    }
+    Returns {
+        int BookReturnID PK
+        int RelatedBorrowingRecordID FK
+    }
+    Fines {
+        int FineRecordID PK
+        int MemberAccountID FK
+    }
+    BorrowingActivityLog {
+        int ActivityLogEntryID PK
+    }
+
+    %% RELATIONSHIPS (Education)
+    Departments ||--o{ Majors : "has"
+    Departments ||--o{ Students : "enrolls"
+    Departments ||--o{ Instructors : "employs"
+    Departments ||--o{ Courses : "owns"
+
+    Majors ||--o{ Students : "has"
+    Majors ||--o{ Courses : "associates"
+    Majors ||--o{ CurriculumPlan : "plans"
+
+    Students ||--o{ Enrollments : "makes"
+    Students ||--o{ StudentStatusChanges : "logs"
+
+    Instructors ||--o{ CourseOfferings : "assigned_to"
+
+    Courses ||--o{ CourseOfferings : "offered_as"
+    Courses ||--o{ CurriculumPlan : "included_in"
+
+    Semesters ||--o{ CourseOfferings : "runs_in"
+    Semesters ||--o{ StudentStatusChanges : "records"
+
+    CourseOfferings ||--o{ ClassSchedules : "scheduled_in"
+    CourseOfferings ||--o{ ExamSchedules : "examined_in"
+    %% Enrollments explicitly dropped the FK to CourseOffering in DDL, mapped logically here:
+    CourseOfferings ||--o{ Enrollments : "receives"
+
+    Enrollments ||--o{ StudentCourses : "contains"
+    Userlink ||--o| UserAccounts : "authenticates"
+
+    %% RELATIONSHIPS (Library)
+    Students ||--o| Members : "registers_as"
+
+    Publishers ||--o{ Books : "publishes"
+    Categories ||--o{ Books : "categorizes"
+
+    Books ||--o{ BookAuthors : "written_by"
+    Authors ||--o{ BookAuthors : "writes"
+
+    Books ||--o{ BookCopies : "has_copy"
+
+    Members ||--o{ Borrowing : "initiates"
+    Members ||--o{ Fines : "incurs"
+    
+    BookCopies ||--o{ Borrowing : "is_borrowed"
+
+    Borrowing ||--o| Returns : "returned_via"
+    Borrowing ||--o{ BorrowingActivityLog : "logs"
+```
 ## Project Structure
 
 The project is organized into a clear directory structure:
